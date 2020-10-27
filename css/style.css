@@ -14,6 +14,8 @@ body {
   line-height: 1.6;
   color: #2a2a2a;
   margin: 0;
+
+  overflow-x: hidden;
 }
 
 nav {
@@ -50,4 +52,52 @@ main {
 
 main.open {
   transform: translate(240px, 0);
+}
+
+a.toggle-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 24px;
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+a.toggle-nav img {
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section div {
+  width: 350px;
+}
+
+section div.content {
+  margin: 0 0 0 60px;
+}
+
+h1 {
+  font-family: 'Young Serif', serif;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.content p {
+  margin: 20px 0;
+}
+
+.content a.button {
+  display: inline-block;
+  background-color: #00b98d;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
 }
