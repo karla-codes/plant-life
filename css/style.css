@@ -79,7 +79,7 @@ section div {
   width: 350px;
 }
 
-section div.content {
+div.content {
   margin: 0 0 0 60px;
 }
 
@@ -93,11 +93,26 @@ h1 {
   margin: 20px 0;
 }
 
-.content a.button {
+a.button {
   display: inline-block;
   background-color: #00b98d;
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 4px;
+}
+
+div.slideshow {
+  height: 475px;
+  position: relative;
+}
+
+div.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.slideshow img:first-child {
+  z-index: 1;
 }
