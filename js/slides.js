@@ -37,3 +37,10 @@ slideArea.addEventListener('mouseover', function () {
     image.style.transform = `translate(${x}px, ${y}px)`;
   });
 });
+
+// when I move my mouse away, put the images back
+slideArea.addEventListener('mouseout', function () {
+  images.forEach(image => {
+    image.style.transform = '';
+  });
+});
