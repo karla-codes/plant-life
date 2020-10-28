@@ -15,8 +15,25 @@ slideArea.addEventListener('click', function () {
     currentSlide = 0;
   }
 
+  // remove the animation from the style from EVERY image (reset animation)
+  images.forEach(image => {
+    image.style.animation = '';
+  });
+
   // pick the right image
   images[currentSlide].style.zIndex = z;
+
+  // add fade animation to current image
+  images[currentSlide].style.animation = 'fade 0.6s';
 });
 
-console.log(images);
+// when I hover mouse over slideshow area, put all
+// of the images in a random place
+slideArea.addEventListener('mouseover', function () {
+  images.forEach(image => {
+    const x = 100 * Math.random() - 50;
+    const y = 100 * Math.random() - 50;
+
+    image.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
